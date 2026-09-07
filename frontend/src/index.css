@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom color palette */
+  --color-botanic-50: #f2f7f3;
+  --color-botanic-100: #e1ede3;
+  --color-botanic-200: #c5ddca;
+  --color-botanic-300: #9bc4a3;
+  --color-botanic-400: #6ea678;
+  --color-botanic-500: #4c8a57;
+  --color-botanic-600: #3a6f43;
+  --color-botanic-700: #2f5837;
+  --color-botanic-800: #28462e;
+  --color-botanic-900: #223a27;
+  --color-botanic-950: #0e1f12;
+
+  --color-forest-850: #141e17;
+  --color-forest-900: #0f1712;
+  --color-forest-950: #080d0a;
+
+  --color-sage-50: #f6f7f5;
+  --color-sage-100: #ebeee9;
+  --color-sage-200: #d7ded4;
+  --color-sage-300: #b9c6b4;
+  --color-sage-400: #96aa8f;
+  --color-sage-500: #778d6f;
+
+  --color-earth-50: #fafaf9;
+  --color-earth-100: #f5f5f4;
+  --color-earth-200: #e7e5e4;
+  --color-earth-300: #d6d3d1;
+  --color-earth-400: #a8a29e;
+  --color-earth-500: #78716c;
+  --color-earth-600: #57534e;
+  --color-earth-700: #44403c;
+  --color-earth-800: #292524;
+  --color-earth-900: #1c1917;
+  --color-earth-950: #0c0a09;
+
+  /* Font family */
+  --font-family-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+
+  /* Custom animations */
+  --animate-scan-line: scan 2.4s ease-in-out infinite alternate;
+  --animate-pulse-subtle: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in: fadeIn 0.35s ease-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+
+  @keyframes scan {
+    0%   { transform: translateY(0%); }
+    100% { transform: translateY(98%); }
+  }
+
+  @keyframes pulseSubtle {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.7; }
+  }
+
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0%   { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Glassmorphic Surfaces */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(20, 30, 23, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(46, 88, 55, 0.25);
+}
+
+/* Subtle laser scan line effect */
+.scan-laser {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #4c8a57 30%, #6ea678 50%, #4c8a57 70%, transparent 100%);
+  box-shadow: 0 0 12px #6ea678, 0 0 24px #4c8a57;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

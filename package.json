@@ -1,0 +1,13 @@
+{
+  "name": "plantdoc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"green,cyan\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && .venv\\Scripts\\python.exe run.py",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

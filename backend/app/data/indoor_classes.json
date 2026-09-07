@@ -1,0 +1,18 @@
+[
+  "AloeVera_Anthracnose",
+  "AloeVera_Healthy",
+  "AloeVera_Leaf_Spot",
+  "AloeVera_Rust",
+  "AloeVera_SunBurn",
+  "Cactus_Dactylopius_Opuntia",
+  "Cactus_Healthy",
+  "MoneyPlant_Bacterial_Wilt",
+  "MoneyPlant_Healthy",
+  "MoneyPlant_Manganese_Toxicity",
+  "SnakePlant_Anthracnose",
+  "SnakePlant_Healthy",
+  "SnakePlant_Leaf_Withering",
+  "SnakePlant_Rot",
+  "SpiderPlant_Fungal_Leaf_Spot",
+  "SpiderPlant_Healthy"
+]
