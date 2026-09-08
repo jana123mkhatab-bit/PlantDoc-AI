@@ -6,6 +6,7 @@ import UploadZone from './components/UploadZone';
 import ScanningView from './components/ScanningView';
 import ResultsView from './components/ResultsView';
 import ArchitectureView from './components/ArchitectureView';
+import ShowcaseSection from './components/ShowcaseSection';
 import ModelStatsModal from './components/ModelStatsModal';
 import HistoryGallery from './components/HistoryGallery';
 import Footer from './components/Footer';
@@ -201,6 +202,9 @@ export default function App() {
           onScrollToScanner={handleScrollToScanner}
           onOpenArchitecture={() => setIsArchitectureOpen(true)}
         />
+
+        {/* Demo Showcase Section */}
+        <ShowcaseSection />
 
         {/* Diagnostic Core Section */}
         <section ref={scannerRef} className="py-8 scroll-mt-20">
